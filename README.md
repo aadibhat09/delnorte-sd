@@ -1,7 +1,7 @@
 # Team DelNorte-SD 2025 Wiki
 
 The main language used to write wikis in this repository is `Markdown`.
-
+ 
 This repository **MUST** contain all coding assets to generate your team's wiki
 (HTML, CSS, JavaScript, TypeScript, Python, etc).
 
