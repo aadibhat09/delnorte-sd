@@ -16,7 +16,7 @@ freezer = Freezer(app)
 @app.cli.command()
 def freeze():
     freezer.freeze()
-#
+
 
 @app.cli.command()
 def serve():
