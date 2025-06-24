@@ -1,6 +1,5 @@
 from os import path
 
-import pypandoc
 from flask import Flask, render_template
 from flask_frozen import Freezer
 
@@ -26,18 +25,20 @@ def serve():
 
 @app.route('/')
 def home():
-    md_content = pypandoc.convert_file('docs/home.md', 'html')
+    with open('docs/home.html', 'r', encoding='utf-8') as f:
+        html_content = f.read()
     return render_template('base.html',
                            title='Home',
-                           md_content=md_content)
+                           md_content=html_content)
 
 
 @app.route('/<page>')
 def pages(page):
-    md_content = pypandoc.convert_file(f'docs/{page.lower()}.md', 'html')
+    with open(f'docs/{page.lower()}.html', 'r', encoding='utf-8') as f:
+        html_content = f.read()
     return render_template('base.html',
                            title=page.title().replace('-', ' '),
-                           md_content=md_content)
+                           md_content=html_content)
 
 
 # Main Function, Runs at http://0.0.0.0:8080
