@@ -1,7 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <!-- TEAM NAME -->
-    <a class="navbar-brand" href="{{ url_for('home') }}">Del Norte SD</a>
+    <a class="navbar-brand d-flex align-items-center" href="{{ url_for('home') }}">
+      <img src="{{ url_for('static', filename='dnsd-logo.svg') }}" alt="Del Norte SD Logo" class="navbar-logo me-2">
+      Del Norte SD
+    </a>
 
     <!-- SMALL SCREEN MENU ICON -->
     <button

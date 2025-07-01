@@ -13,6 +13,19 @@
   font-size: 1.6rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-logo {
+  transform: scale(1.05);
 }
 
 .navbar-brand:hover {
